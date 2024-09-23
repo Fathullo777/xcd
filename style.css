@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.circle:hover {
+    background-color: #45a049;
+}
+
+.counter {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.surprise {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 600px) {
+    .circle {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .counter {
+        font-size: 20px;
+    }
+    .surprise img {
+        width: 100%; /* Изображение будет занимать всю ширину контейнера */
+        height: auto; /* Высота будет автоматически подстраиваться */
+        max-width: 150px; /* Максимальная ширина изображения */
+}
+}
