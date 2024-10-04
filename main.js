@@ -8,7 +8,7 @@ circle.addEventListener('click', () => {
     count++;
     counter.textContent = count;
 
-    if (count === 10) {
+    if (count === 20) {
         surprise.classList.remove('hidden');
     }
 });
