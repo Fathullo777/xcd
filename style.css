@@ -1,15 +1,9 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    margin: 0;
     font-family: Arial, sans-serif;
 }
 
@@ -17,51 +11,63 @@ body {
     text-align: center;
 }
 
-.circle {
-    width: 100px;
-    height: 100px;
-    background-color: #4CAF50;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.circle:hover {
-    background-color: #45a049;
-}
-
 .counter {
     margin-top: 20px;
     font-size: 24px;
 }
+/* Сброс стилей для видео */
+video {
+    max-width: 100%; /* Максимальная ширина видео 100% от родительского контейнера */
+    height: auto; /* Высота будет автоматически подстраиваться */
+}
 
-.surprise {
-    margin-top: 20px;
+/* Стили для контейнера */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование содержимого по горизонтали */
+}
+
+/* Стили для круга */
+.circle {
+    background-color: #f50a1d;
+    color: white;
+    
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+}
+
+/* Скрытие видео по умолчанию */
+.hidden {
+    display: none;
+}
+
+
+#click-text {
+    position: absolute; /* Абсолютное позиционирование для центра */
+    text-align: center;
 }
 
 .hidden {
     display: none;
 }
 
-/* Адаптация для мобильных устройств */
+/* Адаптивность для мобильных устройств */
 @media (max-width: 600px) {
     .circle {
-        width: 80px;
-        height: 80px;
-        font-size: 14px;
+        width: 100px;
+        height: 100px;
+        font-size: 16px;
     }
 
     .counter {
         font-size: 20px;
     }
-    .surprise img {
-        width: 100%; /* Изображение будет занимать всю ширину контейнера */
-        height: auto; /* Высота будет автоматически подстраиваться */
-        max-width: 150px; /* Максимальная ширина изображения */
-}
 }
